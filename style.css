@@ -1,26 +1,35 @@
 .container {
     width: 80%;
-    height: 400px;
+    height: 450px;
     border: 1px solid black;
     margin: 0 auto;
-    /*position: relative;*/
+    position: relative;
 }
 
 .container img {
     width: 100%;
     height: 100%;
+    position: absolute;
 }
 
 .arrow {
     position: absolute;
+    top: 200px;
     width: 35px;
     height: 45px;
     font-size: 1.5rem;
     border: 1px solid #c40000;
     border-radius: 5px;
+    opacity: 0.25;
+    color: #9d0000;
 }
 
 #rightArrow {
     position: relative;
     float: right;
+}
+
+.arrow:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
