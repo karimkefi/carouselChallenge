@@ -12,17 +12,25 @@ function showImage(n) {
     }
 
     for (i=0; i < Images.length; i++) {
-        Images[i].style.display = "none";                           //remove inline style
+        Images[i].className ="slideImg hiddenImg";
     }
 
-    console.log(Images[index]);
-    Images[index -1].style.display = "inline-block";                //remove inline style
+    Images[index -1].className = "slideImg visibleImg";
 }
 
 
 function timedSliding () {
     index++;
     showImage(index);
+}
+
+
+function slideRight(ElementID) {
+
+}
+
+function slideLeft(ElementID) {
+
 }
 
 
