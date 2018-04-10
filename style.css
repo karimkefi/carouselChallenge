@@ -24,10 +24,15 @@
     position: absolute;
 }
 
-.visibleImg{
+.visibleImgIn{
     display: inline-block;
-    /*transform: translateX(+100px);*/
     animation-name: slide-in;
+    animation-duration: 1000ms;
+}
+
+.visibleImgOut{
+    display: inline-block;
+    animation-name: slide-out;
     animation-duration: 1000ms;
 }
 

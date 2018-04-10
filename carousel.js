@@ -3,6 +3,8 @@ var index = 1;
 function showImage(n) {
     var Images = document.getElementsByClassName("slideImg");
 
+    console.log('Index: ' + index);
+
     if (n > Images.length) {
         index = 1;
     }
@@ -15,22 +17,20 @@ function showImage(n) {
         Images[i].className ="slideImg hiddenImg";
     }
 
-    Images[index -1].className = "slideImg visibleImg";
-}
+    if(index === 1) {
+        console.log('here i am')
+        Images[index - 1].className = "slideImg visibleImgIn";
+        Images[Images.length - 1].className = "slideImg visibleImgOut";
+    } else {
+        Images[index - 1].className = "slideImg visibleImgIn";
+        Images[index - 2].className = "slideImg visibleImgOut";
+    }
 
+}
 
 function timedSliding () {
     index++;
     showImage(index);
-}
-
-
-function slideRight(ElementID) {
-
-}
-
-function slideLeft(ElementID) {
-
 }
 
 
