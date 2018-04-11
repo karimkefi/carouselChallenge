@@ -3,7 +3,7 @@
 }
 
 .header{
-    width: 80%;
+    width: 800px;
     height: 100px;
     text-align: center;
     margin: 0 auto;
@@ -11,11 +11,12 @@
 }
 
 .container {
-    width: 80%;
+    width: 800px;
     height: 450px;
-    border: 1px solid black;
+    border: 10px solid #74736c;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
 }
 
 .container img {
@@ -24,14 +25,21 @@
     position: absolute;
 }
 
+
+/* * * * * * * * CSS form Sliding images * * * * * * * * */
+
 .visibleImgIn{
     display: inline-block;
+    width: auto;
+    height: auto;
     animation-name: slide-in;
     animation-duration: 1000ms;
 }
 
 .visibleImgOut{
     display: inline-block;
+    width: auto;
+    height: auto;
     animation-name: slide-out;
     animation-duration: 1000ms;
 }
@@ -39,6 +47,10 @@
 .hiddenImg{
     display: none;
 }
+
+
+/* * * * * * * * CSS form Arrows * * * * * * * * */
+
 
 .arrow {
     position: absolute;
@@ -61,6 +73,12 @@
     cursor: pointer;
     opacity: 0.5;
 }
+
+
+
+/* * * * * * * * Keyframes for Sliding images * * * * * * * * */
+
+
 
 @keyframes slide-in {
     0%      { transform: translateX(100%);  }
