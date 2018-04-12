@@ -18,12 +18,17 @@ function showImage(n) {
     }
 
     if(index === 1) {
-        console.log('here i am')
+            console.log('INDEX1:')
         Images[index - 1].className = "slideImg visibleImgIn";
+            console.log('In: ' + index-1)
         Images[Images.length - 1].className = "slideImg visibleImgOut";
+            console.log('Out: ' + Images.length - 1)
     } else {
+            console.log('INDEX1:')
         Images[index - 1].className = "slideImg visibleImgIn";
+            console.log('In: ' + index-1)
         Images[index - 2].className = "slideImg visibleImgOut";
+            console.log('Out: ' + index-2)
     }
 
 }
