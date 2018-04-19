@@ -48,9 +48,6 @@
     z-index: 3;
 }
 
-
-/*or use "animation-direction: reverse"*/
-
 .slideIN-LtoR {
     display: inline-block;
     width: auto;
@@ -60,7 +57,6 @@
     animation-timing-function: ease-in-out;
     z-index: 5;
 }
-
 
 .slideOut-LtoR {
     display: inline-block;
@@ -74,6 +70,19 @@
 
 .hiddenImg{
     display: none;
+}
+
+.imgCaption {
+    position: relative;
+    margin: 0 auto;
+    background-color: lightgrey;
+    opacity: 0.5;
+    z-index: 20;
+    width: 50vw;
+    height: 10vw;
+    /*top: 320px;*/
+    text-align: center;
+    border-radius: 5px;
 }
 
 /* * * * * * * * CSS form Arrows * * * * * * * * */

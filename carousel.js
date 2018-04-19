@@ -22,6 +22,7 @@ function showImage(n) {
     console.log(arrow)
     console.log('Start:' + start)
 
+    //what to do when images are sliding Right to Left
     if (arrow === "right") {
         if(start) {
             Images[index - 1].className = "slideImg slideIN-RtoL";
@@ -41,6 +42,7 @@ function showImage(n) {
         }
     }
 
+    //what to do when images are sliding Left to Right
     if(arrow === "left") {
         if(start) {
             Images[index - 1].className = "slideImg slideIN-LtoR";
@@ -54,7 +56,7 @@ function showImage(n) {
             } else {
                 Images[index - 1].className         = "slideImg slideIN-LtoR";
                 console.log('In (L to R): ' + (index-1));
-                Images[index ].className            = "slideImg slideOut-LtoR";
+                Images[index].className            = "slideImg slideOut-LtoR";
                 console.log('Out (L to R): ' + (index));
             }
         }
@@ -83,48 +85,38 @@ document.getElementById("rightArrow").addEventListener("click", function (){
 })
 
 
-//add event listener for the dots similar to the above arrow click
-//slide should jump to the Index = dot's n
 
 function slideToTarget(targetIndex) {
     var target = targetIndex;
 
     if(index < target) {
-        arrow = "right"
-        do {
-            index = index + 1;
-            setInterval (showImage(index) ,500);
-        } while (index < target);
+        arrow = "right";
     }
 
     if(index > target) {
         arrow = "left"
-        do {
-            index = index - 1;
-            setInterval (showImage(index) ,500);
-        } while (target < index);
     }
+    index = target;
 
+    console.log('target = ' + target)
+    console.log('index = ' + index)
     showImage(index);
 }
 
 
-document.getElementById("dot2").addEventListener("click", function (){
-    slideToTarget(2);
-})
 
+var elementHTMLCollection = document.getElementsByClassName("dot")
+var elementArray = Array.from(elementHTMLCollection)
 
-var arrayX = document.getElementsByClassName("dot")
-for(i = 1; i < arrayX.length + 1; i++) {
+elementArray.forEach(function(element){
 
-    var dotElement = "dot" + i
-    console.log(dotElement)
+    var indextarget = element.getAttribute("data-slideTo")
 
-    document.getElementById(dotElement).addEventListener("click", function (){
-        slideToTarget(i);
+    element.addEventListener("click", function (){
+        slideToTarget(indextarget);
     })
 
-}
+})
 
 
 setTimeout(timedSliding());
