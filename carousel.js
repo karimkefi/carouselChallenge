@@ -20,33 +20,22 @@ function showImage(n) {
         Caption[i].className = "imgCaption hidden"
     }
 
-    console.log('Function before If Index: ' + index);
-    console.log(arrow)
-    console.log('Start:' + start)
-
     //what to do when images are sliding Right to Left
     if (arrow === "right") {
         if(start) {
             Images[index - 1].className                 = "slideImg slideIN-RtoL";
             Caption[index - 1].className                = "imgCaption caption-In";
-            console.log('In (R to L): ' + (index-1));
         } else {
             if(index === 1) {
                 Images[Images.length - 1].className     = "slideImg slideOut-RtoL";
                 Caption[Images.length - 1].className    = "imgCaption hidden";
-                console.log('Out (R to L): ' + (Images.length-1));
-
                 Images[index - 1].className             = "slideImg slideIN-RtoL";
                 Caption[index - 1].className            = "imgCaption caption-In";
-                console.log('In (R to L): ' + (index-1));
             } else {
                 Images[index - 2].className             = "slideImg slideOut-RtoL";
                 Caption[index - 2].className            = "imgCaption hidden";
-                console.log('Out (R to L): ' + (index-2));
-
                 Images[index - 1].className             = "slideImg slideIN-RtoL";
                 Caption[index - 1].className            = "imgCaption caption-In";
-                console.log('In (R to L): ' + (index-1));
             }
         }
     }
@@ -56,24 +45,18 @@ function showImage(n) {
         if(start) {
             Images[index - 1].className                 = "slideImg slideIN-LtoR";
             Caption[index - 1].className                = "imgCaption caption-In";
-            console.log('In (L to R): ' + (index-1));
+
         } else {
             if(index === 5) {
                 Images[Images.length - 1].className     = "slideImg slideIN-LtoR";
                 Caption[Images.length - 1].className    = "imgCaption caption-In";
-                console.log('In (L to R): ' + (Images.length-1));
-
                 Images[index - Images.length].className = "slideImg slideOut-LtoR";
                 Caption[index - Images.length].className = "imgCaption hidden";
-                console.log('Out (L to R): ' + (index));
             } else {
                 Images[index - 1].className             = "slideImg slideIN-LtoR";
                 Caption[index - 1].className            = "imgCaption caption-In";
-                console.log('In (L to R): ' + (index-1));
-
                 Images[index].className                 = "slideImg slideOut-LtoR";
                 Caption[index].className                = "imgCaption hidden";
-                console.log('Out (L to R): ' + (index));
             }
         }
 
@@ -84,7 +67,8 @@ function showImage(n) {
 
 function timedSliding () {
     showImage(index);
-    // index++;
+    arrow = "right"
+    index++;
 }
 
 
@@ -101,7 +85,6 @@ document.getElementById("rightArrow").addEventListener("click", function (){
 })
 
 
-
 function slideToTarget(targetIndex) {
     var target = targetIndex;
 
@@ -114,11 +97,8 @@ function slideToTarget(targetIndex) {
     }
     index = target;
 
-    console.log('target = ' + target)
-    console.log('index = ' + index)
     showImage(index);
 }
-
 
 
 var elementHTMLCollection = document.getElementsByClassName("dot")
@@ -135,5 +115,5 @@ elementArray.forEach(function(element){
 })
 
 
-setTimeout(timedSliding());
-// setInterval(timedSliding,1000);
+// setTimeout(timedSliding());
+setInterval(timedSliding,3000);
