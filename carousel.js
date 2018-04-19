@@ -86,11 +86,46 @@ document.getElementById("rightArrow").addEventListener("click", function (){
 //add event listener for the dots similar to the above arrow click
 //slide should jump to the Index = dot's n
 
+function slideToTarget(targetIndex) {
+    var target = targetIndex;
+
+    if(index < target) {
+        arrow = "right"
+        do {
+            index = index + 1;
+            setInterval (showImage(index) ,500);
+        } while (index < target);
+    }
+
+    if(index > target) {
+        arrow = "left"
+        do {
+            index = index - 1;
+            setInterval (showImage(index) ,500);
+        } while (target < index);
+    }
+
+    showImage(index);
+}
+
 
 document.getElementById("dot2").addEventListener("click", function (){
-    index = 3;
-    showImage(index);
+    slideToTarget(2);
 })
+
+
+var arrayX = document.getElementsByClassName("dot")
+for(i = 1; i < arrayX.length + 1; i++) {
+
+    var dotElement = "dot" + i
+    console.log(dotElement)
+
+    document.getElementById(dotElement).addEventListener("click", function (){
+        slideToTarget(i);
+    })
+
+}
+
 
 setTimeout(timedSliding());
 // setInterval(timedSliding,1000);
