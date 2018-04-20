@@ -74,11 +74,15 @@
 
 /* * * * * * * * CSS form Sliding images * * * * * * * * */
 
+.imgCaption p {
+    font-size: 0.8rem;
+}
+
 .imgCaption {
     position: relative;
     margin: 0 auto;
     background-color:rgba(211, 211, 211, 0.5);
-    width: 50vw;
+    width: 70vw;
     height: 200px;
     text-align: center;
     border-radius: 5px;
@@ -187,5 +191,10 @@
         width: 90vw;
         height: 50vw;
     }
+
+    .imgCaption p {
+        font-size: 0.7rem;
+    }
+
 }
 
