@@ -1,6 +1,6 @@
 var index = 1;
 var start = true;
-var arrow = "right"
+var arrow = "right";
 
 function showImage(n) {
     var Images = document.getElementsByClassName("slideImg");
@@ -23,8 +23,8 @@ function showImage(n) {
     //what to do when images are sliding Right to Left
     if (arrow === "right") {
         if(start) {
-            Images[index - 1].className                 = "slideImg slideIN-RtoL";
-            Caption[index - 1].className                = "imgCaption caption-In";
+                Images[index - 1].className             = "slideImg slideIN-RtoL";
+                Caption[index - 1].className            = "imgCaption caption-In";
         } else {
             if(index === 1) {
                 Images[Images.length - 1].className     = "slideImg slideOut-RtoL";
@@ -43,8 +43,8 @@ function showImage(n) {
     //what to do when images are sliding Left to Right
     if(arrow === "left") {
         if(start) {
-            Images[index - 1].className                 = "slideImg slideIN-LtoR";
-            Caption[index - 1].className                = "imgCaption caption-In";
+                Images[index - 1].className             = "slideImg slideIN-LtoR";
+                Caption[index - 1].className            = "imgCaption caption-In";
 
         } else {
             if(index === 5) {
@@ -67,20 +67,20 @@ function showImage(n) {
 
 function timedSliding () {
     showImage(index);
-    arrow = "right"
+    arrow = "right";
     index++;
 }
 
 
 document.getElementById("leftArrow").addEventListener("click", function (){
     index--;
-    arrow = "left"
+    arrow = "left";
     showImage(index);
 })
 
 document.getElementById("rightArrow").addEventListener("click", function (){
     index++;
-    arrow = "right"
+    arrow = "right";
     showImage(index);
 })
 
@@ -93,10 +93,9 @@ function slideToTarget(targetIndex) {
     }
 
     if(index > target) {
-        arrow = "left"
+        arrow = "left";
     }
     index = target;
-
     showImage(index);
 }
 
@@ -116,4 +115,4 @@ elementArray.forEach(function(element){
 
 
 // setTimeout(timedSliding());
-setInterval(timedSliding,3000);
+setInterval(timedSliding,5000);

@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="head" class="header">
-        Carousel Challege
-    </div>
 
+<div id="head" class="header">
+    Carousel Challege
+</div>
+
+<div class="carousel">
     <div id="container" class="container">
 
         <img class="slideImg hidden" src="images/1.jpg">
@@ -21,36 +23,38 @@
         <button class="arrow" id="leftArrow">&#10094</button>
         <button class="arrow" id="rightArrow">&#10095</button>
 
+        <div class="dots" style="text-align:center">
+            <span class="dot" id="dot1" data-slideTo="1"></span>
+            <span class="dot" id="dot2" data-slideTo="2"></span>
+            <span class="dot" id="dot3" data-slideTo="3"></span>
+            <span class="dot" id="dot4" data-slideTo="4"></span>
+            <span class="dot" id="dot5" data-slideTo="5"></span>
+        </div>
     </div>
 
-    <div class="dots" style="text-align:center">
-        <span class="dot" id="dot1" data-slideTo="1"></span>
-        <span class="dot" id="dot2" data-slideTo="2"></span>
-        <span class="dot" id="dot3" data-slideTo="3"></span>
-        <span class="dot" id="dot4" data-slideTo="4"></span>
-        <span class="dot" id="dot5" data-slideTo="5"></span>
+    <div class="imgcontainer">
+        <div class="imgCaption hidden" id="imgCaption1">
+            <h3>Image 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div class="imgCaption hidden" id="imgCaption2">
+            <h3>Image 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div class="imgCaption hidden" id="imgCaption3">
+            <h3>Image 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div class="imgCaption hidden" id="imgCaption4">
+            <h3>Image 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div class="imgCaption hidden" id="imgCaption5">
+            <h3>Image 5</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
     </div>
-
-    <div class="imgCaption hidden" id="imgCaption1">
-        <h3>Image 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </div>
-    <div class="imgCaption hidden" id="imgCaption2">
-        <h3>Image 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </div>
-    <div class="imgCaption hidden" id="imgCaption3">
-        <h3>Image 3</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </div>
-    <div class="imgCaption hidden" id="imgCaption4">
-        <h3>Image 4</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </div>
-    <div class="imgCaption hidden" id="imgCaption5">
-        <h3>Image 5</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr oident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-    </div>
+</div>
 
 </body>
 
