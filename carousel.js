@@ -114,5 +114,5 @@ elementArray.forEach(function(element){
 })
 
 
-// setTimeout(timedSliding());
-setInterval(timedSliding,5000);
+setTimeout(timedSliding());
+// setInterval(timedSliding,5000);
