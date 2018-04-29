@@ -84,7 +84,7 @@
 
 /* * * * * * * * CSS form Sliding images * * * * * * * * */
 
-.imgcontainer {
+.captionContainer {
     width: 250px;
     height: 400px;
     padding: 25px;
@@ -216,10 +216,10 @@
         height: 50vw;
     }
 
-    .imgcontainer {
+    .captionContainer {
         clear: both;
         width: 90vw;
-        height: 175px;
+        height: 200px;
     }
 
     .imgCaption p {
